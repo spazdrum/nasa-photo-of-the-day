@@ -16,7 +16,7 @@ function Photos () {
         <div>
             <title>{photo.title}</title>
             <h3>{photo.date}</h3>
-            <img src={photo.hdurl} />
+            <img src={photo.hdurl} alt="" />
             <h4>{photo.explanation}</h4>
         </div>
     )
