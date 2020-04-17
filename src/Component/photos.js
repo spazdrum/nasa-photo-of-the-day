@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Card from "./card";
 
 function Photos () {
     const [photo, setPhoto] = useState([])
@@ -9,17 +10,19 @@ function Photos () {
         .then(response => {
             console.log(response)
             setPhoto(response.data)
-        }) 
-    }, [])
+        }).catch(error => {
+            console.log("Error!", error))}
+    }, []);
 
     return (
         <div>
-            <title>{photo.title}</title>
-            <h3>{photo.date}</h3>
-            <img src={photo.hdurl} alt="" />
-            <h4>{photo.explanation}</h4>
+            <Card date = {photo.date}
+            explanation = {photo.explanation}
+            title = {photo.title}
+            date = {photo.date}
+            imgUrl = {photo.hdurl} />
         </div>
-    )
-}
+    );
+};
 
 export default Photos;
