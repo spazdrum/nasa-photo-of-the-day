@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Photos from "./Component/photos";
-import Cards from "./Component/card";
+import Card from "./Component/card";
 
 function App() {
   return (

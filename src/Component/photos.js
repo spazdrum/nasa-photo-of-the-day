@@ -10,8 +10,9 @@ function Photos () {
         .then(response => {
             console.log(response)
             setPhoto(response.data)
-        }).catch(error => {
-            console.log("Error!", error))}
+        })
+        .catch(error => {
+            console.log("Error!", error)}
     }, []);
 
     return (
